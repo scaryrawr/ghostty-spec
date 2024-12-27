@@ -45,8 +45,6 @@ zig build \
   -Doptimize=ReleaseFast \
   -Dcpu=baseline
 
-ls -R %{ghosttybuild}%{_prefix}
-
 %install
 
 install -Dpm 0755 %{ghosttybuild}%{_bindir}/ghostty %{buildroot}%{_bindir}/ghostty
