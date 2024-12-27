@@ -15,6 +15,7 @@ URL: https://ghostty.org
 Source: %{forgesource}
 
 BuildRequires: zig
+BuildRequires: gtk4-devel
 BuildRequires: glib2-devel
 BuildRequires: pandoc
 BuildRequires: freetype-devel
