@@ -1,0 +1,23 @@
+{
+  "name": "ghostty build",
+  "image": "fedora:latest",
+  "features": {
+    "ghcr.io/devcontainers/features/common-utils:2": {
+      "username": "vscode"
+    }
+  },
+  "customizations": {
+    "vscode": {
+      "extensions": [
+        "ms-vscode.cpptools-extension-pack",
+        "github.vscode-github-actions",
+        "vadimcn.vscode-lldb",
+        "ziglang.vscode-zig"
+      ]
+    }
+  },
+  "onCreateCommand": "${containerWorkspaceFolder}/.devcontainer/onCreateCommand.sh",
+  "postCreateCommand": "sudo dnf builddep -y ghostty.spec",
+  "containerUser": "vscode",
+  "remoteUser": "vscode"
+}
