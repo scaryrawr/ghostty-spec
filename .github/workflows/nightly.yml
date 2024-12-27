@@ -15,5 +15,6 @@ jobs:
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git tag -fa tip -m "Nightly build" ${GITHUB_SHA}
-          git push --force origin tip
+          git push --delete origin tip
+          git tag -fa tip -m "Nightly build"
+          git push origin tip
