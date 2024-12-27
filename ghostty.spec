@@ -1,6 +1,8 @@
 %global forgeurl https://github.com/ghostty-org/ghostty/
 %global tag v1.0.0
 %global ghosttybuild /tmp/ghostty
+%define debug_package %{nil}
+
 %forgemeta
 
 Name: ghostty
@@ -125,7 +127,6 @@ install -Dpm 0644 %{ghosttybuild}%{_datadir}/zsh/site-functions/_ghostty %{build
 %{_datadir}/vim/vimfiles/syntax/ghostty.vim
 %{_datadir}/zsh/site-functions/_ghostty
 
-%define debug_package %{nil}
 
 %changelog
 %autochangelog
