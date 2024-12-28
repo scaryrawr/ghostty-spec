@@ -12,7 +12,7 @@ Summary: Fast, native, feature-rich terminal emulator pushing modern features.
 
 License: MIT
 URL: https://ghostty.org
-Source: https://github.com/ghostty-org/ghostty/releases/download/tip/ghostty-source.tar.gz
+Source: %{forgesource}
 
 BuildRequires: zig
 BuildRequires: gtk4-devel
