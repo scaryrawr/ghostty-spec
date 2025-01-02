@@ -1,4 +1,4 @@
-%global ver 1.0.0
+%global ver 1.0.1
 %global forgeurl https://github.com/ghostty-org/ghostty/
 %global tag v%{ver}
 %define debug_package %{nil}
