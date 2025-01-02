@@ -18,10 +18,4 @@ git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
 
 git add -u
 git commit -m "Update to ghostty $latest"
-
-git config push.autoSetupRemote true
 git push
-new_branch=ghostty-${latest}
-git checkout -b ${new_branch}
-
-gh pr create --title "Update to ghostty $latest" --body "Update spec to use $latest" -a scaryrawr
