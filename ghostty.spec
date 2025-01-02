@@ -1,11 +1,12 @@
+%global ver 1.0.0
 %global forgeurl https://github.com/ghostty-org/ghostty/
-%global tag v1.0.0
+%global tag v%{ver}
 %define debug_package %{nil}
 
 %forgemeta
 
 Name: ghostty
-Version: 1.0.0
+Version: %{ver}
 Release: 1%{?dist}
 Summary: Fast, native, feature-rich terminal emulator pushing modern features.
 
