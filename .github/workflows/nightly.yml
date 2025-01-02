@@ -10,6 +10,11 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
+      
+      - name: Check for new release
+        env:
+            GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: ${GITHUB_WORKSPACE}/.github/scripts/update-ghostty.sh
 
       - name: Update nightly tag
         run: |
@@ -18,8 +23,3 @@ jobs:
           git push --delete origin tip
           git tag -fa tip -m "Nightly build"
           git push origin tip
-      
-      - name: Check for new release
-        env:
-            GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-        run: ${GITHUB_WORKSPACE}/.github/scripts/update-ghostty.sh
